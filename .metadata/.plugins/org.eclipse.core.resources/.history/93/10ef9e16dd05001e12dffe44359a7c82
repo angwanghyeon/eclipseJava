@@ -1,0 +1,25 @@
+package exam15.stream;
+
+import java.util.stream.Stream;
+
+public class NationTest {
+	public static void main(String[] args) {
+		
+//		List<Nation> n1 = Nation.nations.subList(0, 5);
+//		Nation[] na	= n1.toArray(new Nation[4]);
+//		
+//		Comparator<Nation> ni = Comparator.comparing(Nation::isIsland);
+//		System.out.println(Arrays.toString(na));
+//		Arrays.sort(na, ni);
+//		System.out.println(Arrays.toString(na));
+//		
+//		Arrays.sort(na, Comparator.comparing(Nation::getGdpRank));
+//		System.out.println(Arrays.toString(na));
+//		
+//		Arrays.sort(na, Comparator.comparing(Nation::getPopulation).reversed());
+//		System.out.println(Arrays.toString(na));
+
+		Stream<Nation> s1 = Nation.nations.stream().limit(5);
+		s1.reduce((a,b)-> a.isIsland() == b.isIsland()).ifPresent(Util::print);
+	}
+}

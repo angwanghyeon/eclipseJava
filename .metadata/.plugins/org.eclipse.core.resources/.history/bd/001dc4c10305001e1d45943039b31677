@@ -1,0 +1,33 @@
+package exam15.stream;
+
+import java.io.StringBufferInputStream;
+import java.util.Arrays;
+import java.util.stream.DoubleStream;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+public class Array2StreamTest {
+	public static void main(String[] args) {
+		int[] ia = {2,3,4,5,10,12,15,18};
+		IntStream is = Arrays.stream(ia);
+//		System.out.println(is);
+		is.forEach(Util::print);
+		is.forEach(Util::print);
+//		public static <T> void print(T t) {
+//			System.out.println(t + " ");
+//		}
+		System.out.println();
+		
+		String[] str = 
+			{"The", "Pen", "Is", "Mighter", "Than", "the", "Sword"};
+		Stream<String> ss = Stream.of(str);
+		ss.forEach(Util::print);
+		
+		System.out.println();
+		double[] d = 
+			{10.2 , 20.3, 3.14, 15.98, 16.22};
+		DoubleStream ds = Arrays.stream(d);
+		ds.forEach(Util::print);
+		
+	}
+}

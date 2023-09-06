@@ -1,0 +1,15 @@
+package exam15;
+
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+
+public class Consumertest {
+	public static void main(String[] args) {
+		Consumer<String> c1 = x-> System.out.println(x.toLowerCase());
+		c1.accept("Java Functional Interface");
+		
+		BiConsumer<String, String> c2 = (x,y) -> 
+		System.out.println(x + " : "+y);
+		c2.accept("Java", "Lambda");
+	}
+}

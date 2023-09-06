@@ -1,0 +1,17 @@
+package exam15.stream;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
+public class NationTest {
+	public static void main(String[] args) {
+		
+		List<Nation> n1 = new ArrayList<>();
+		n1.addAll(Nation.nations);
+		
+//		Collections.addAll(, n1);
+		n1.stream().filter(Nation::isIsland).sorted().forEach(x-> System.out.println(x+" "));
+		
+	}
+}

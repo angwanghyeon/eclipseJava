@@ -1,0 +1,7 @@
+package exam17;
+
+public class StringWriteReadTest {
+	public static void main(String[] args) {
+		
+	}
+}

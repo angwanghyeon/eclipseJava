@@ -1,0 +1,12 @@
+package exam15;
+
+import java.util.function.BinaryOperator;
+import java.util.function.IntUnaryOperator;
+
+public class OperatorTest {
+	public static void main(String[] args) {
+		IntUnaryOperator add = x -> x+2;
+		System.out.println(add.applyAsInt(30));
+		
+	}
+}

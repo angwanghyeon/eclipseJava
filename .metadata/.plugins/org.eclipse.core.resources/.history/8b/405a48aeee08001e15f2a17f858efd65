@@ -1,0 +1,12 @@
+package practice.ex08;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+
+public class DoubleTxtTest {
+	public static void main(String[] args) throws Exception {
+		OutputStream os = new FileOutputStream("C:/Temp/double.txt");
+		
+	}
+}

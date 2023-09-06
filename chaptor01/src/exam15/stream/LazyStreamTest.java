@@ -1,0 +1,18 @@
+package exam15.stream;
+
+import java.util.stream.IntStream;
+
+public class LazyStreamTest {
+	public static void main(String[] args) {
+		IntStream is = IntStream.rangeClosed(1, 5);//1~5를 받는 stream 생성
+		
+		is.filter(x -> { //x를 받아서 하나씩 출력하고 그리고 x가 2의 배수만 계산해서 리턴
+			System.out.println("filter : "+x);
+			return x%2 == 0 ;	
+		}).map(x-> { //x는 받은 값을 출력하고 둘을 곱해서 다시 리턴해준다.
+			System.out.println("map : "+x);
+			return x*x;
+		}).forEach(x -> System.out.println("forEach : "+x));
+		
+	}
+}

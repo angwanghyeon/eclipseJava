@@ -1,0 +1,12 @@
+package exam16;
+
+import java.util.stream.Stream;
+
+public class MapTest {
+	public static void main(String[] args) {
+		Stream<String> s1 = Stream.of("a1", "b1", "b2", "c1", "c2", "c3");
+//		Stream<String> s2 = s1.map(s -> s.toUpperCase());
+		Stream<String> s2 = s1.map(String::toUpperCase);
+		s2.forEach(Util::print);
+	}
+}

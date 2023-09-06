@@ -1,0 +1,10 @@
+package exam15.stream;
+
+import java.awt.Window.Type;
+
+public class Nation {
+		private final String name;
+		private final Type type;
+		private final double population;
+	
+}

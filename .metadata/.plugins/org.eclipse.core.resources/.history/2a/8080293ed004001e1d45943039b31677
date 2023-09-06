@@ -1,0 +1,10 @@
+package exam15;
+
+import java.util.function.IntPredicate;
+
+public class PredicateTest {
+	public static void main(String[] args) {
+		IntPredicate even = x -> x % 2 == 0;
+		System.out.println(even.test(368)? "짝수" : "홀수");
+	}
+}

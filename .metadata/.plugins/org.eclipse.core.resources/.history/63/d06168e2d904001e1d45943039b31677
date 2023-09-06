@@ -1,0 +1,11 @@
+package exam15;
+
+import java.util.function.Function;
+
+import exam14.lambda.Car;
+
+public class CarFunctionTest {
+	public static void main(String[] args) {
+		Function<Car, String> f1 = c -> c.getModel();
+	}
+}

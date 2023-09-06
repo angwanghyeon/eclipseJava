@@ -1,0 +1,20 @@
+package practice.ex07;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import exam15.stream.Util;
+
+public class CapitalTest {
+	public static void main(String[] args) {
+		List<String> capital = new ArrayList<>();
+		capital.add("서울");
+		capital.add("워싱턴");
+		capital.add("베이징");
+		capital.add("파리");
+		capital.add("마드리드");
+		capital.add("런던");
+		capital.stream().sorted().findFirst().toString();
+	}
+}

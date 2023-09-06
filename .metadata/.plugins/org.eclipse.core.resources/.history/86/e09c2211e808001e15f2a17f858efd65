@@ -1,0 +1,11 @@
+package practice.ex07;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class StringListTest {
+	public static void main(String[] args) {
+		List<String> list = List.of("민국", "지우","하준","지우"	);
+		list.stream().map(s -> s.length()).collect(Collectors.)
+	}
+}

@@ -1,0 +1,16 @@
+package exam16;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
+
+import exam15.stream.Util;
+
+public class FlatMapTest {
+	public static void main(String[] args) {
+		List<String> list1 = List.of("안녕, 자바!", "잘 가, C++!");
+		Stream<String> s1 = list1.stream();
+		Stream<String> s2 = s1.flatMap(s->Arrays.stream(s.split(" ")));
+		s2.forEach(Util::printWithParethesis);
+	}
+}

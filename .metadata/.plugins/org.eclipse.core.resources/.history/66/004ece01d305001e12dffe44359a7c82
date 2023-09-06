@@ -1,0 +1,15 @@
+package exam16.collect;
+
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import exam15.stream.Nation;
+
+public class GroupingTest {
+	public static void main(String[] args) {
+		Stream<Nation> sn = Nation.nations.stream().limit(4); //4개만 받아서 생성
+		Map< Type , List<Nation>> m1 =	sn.collect(Collectors.groupingBy(Nation::getType));
+	}
+}

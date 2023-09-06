@@ -1,0 +1,60 @@
+package exam14.lambda;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Car {
+	private String model;
+	private int age;
+	private boolean gasoline;
+	private int mileage;
+
+	public Car(String model, int age, boolean gasoline, int mileage) {
+		this.model = model;
+		this.age = age;
+		this.gasoline = gasoline;
+		this.mileage = mileage;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+
+
+	public int getAge() {
+		return age;
+	}
+
+
+	public boolean isGasoline() {
+		return gasoline;
+	}
+
+
+
+	public int getMileage() {
+		return mileage;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Car [model=" + model + ", age=" + age + ", gasoline=" + gasoline + ", mileage=" + mileage + "]";
+	}
+
+	public static final List<Car> car = Arrays.asList(
+			new Car("소나타", 18, true, 210000),
+			new Car("벤츠", 9, false, 100000),
+			new Car("람보르기니", 7, true, 80000),
+			new Car("아반테", 15, false, 170000),
+			new Car("제네시스", 8, true, 60000),
+			new Car("페라리", 10, true, 110000),
+			new Car("포르쉐", 12, false, 140000),
+			new Car("아우디", 14, true, 150000),
+			new Car("BMW", 16, true, 180000),
+			new Car("랜드로버", 3, false, 20000)		
+			);
+
+}

@@ -1,0 +1,9 @@
+package practice.ex08;
+
+import java.io.InputStream;
+
+public class BufferedReader {
+	public static void main(String[] args) {
+		InputStream is = System.in;
+	}
+}

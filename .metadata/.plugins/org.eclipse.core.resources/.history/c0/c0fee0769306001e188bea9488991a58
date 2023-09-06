@@ -1,0 +1,13 @@
+package exam17.substream;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.Reader;
+
+public class ReadLineTest {
+	public static void main(String[] args) throws Exception {
+		Reader r = new FileReader(
+				ReadLineTest.class.getResource("language.txt").getPath()
+				);
+	}
+}

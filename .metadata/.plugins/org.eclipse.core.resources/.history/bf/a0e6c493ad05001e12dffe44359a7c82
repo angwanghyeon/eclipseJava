@@ -1,0 +1,23 @@
+package exam16;
+
+import java.util.Comparator;
+import java.util.stream.Stream;
+
+import exam15.stream.Nation;
+import exam15.stream.Util;
+
+public class NationSortedTest {
+	public static void main(String[] args) {
+		
+		Stream<Nation> n1 = Nation.nations.stream();
+		Stream<Nation> n2 = 
+				n1.sorted(Comparator.comparing(Nation::getName));
+		Stream<String> s3 = n2.map(x->x.getName());
+		s3.forEach(Util::printWithParethesis);
+		System.out.println();
+		
+		Stream<Nation> n3 = Nation.nations.stream();
+		Stream<Nation> n4 = n3.sorted(Comparator.comparing(Nation::getGdpRank));
+		Stream<String> s4 = 
+	}
+}

@@ -1,0 +1,7 @@
+package exam17.substream;
+
+public class BufferTest {
+	public static void main(String[] args) {
+		String originalFilePath1 = BufferTest.class.getSouce("bg001.jpg");
+	}
+}

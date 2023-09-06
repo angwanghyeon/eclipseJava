@@ -1,0 +1,61 @@
+package exam14.lambda;
+
+@FunctionalInterface
+interface Mathemetical{double calculator(double b);}
+
+@FunctionalInterface
+interface Pickable{char pick(String s, int i);}
+
+@FunctionalInterface
+interface Computable{int compute(int x, int y);}
+
+class Utils{
+	int add(int a, int b) {
+		return a+b;
+	}
+}
+
+interface Applyable{
+	boolean apply(Box a, Box b);
+}
+
+class Box{
+	private int no;
+
+	public Box(int no) {
+		this.no=no;
+	}
+	boolean isSame(Box b) {
+		return this.no == b.no;
+	}
+}
+
+public class MethodRefTest {
+	public static void main(String[] args) {
+		
+		Mathemetical m;
+		Pickable p;
+		Computable c;
+		
+//		m = d -> Math.abs(d); //람다식 표현
+		m = Math :: abs; //static 메소드라서 가능
+		System.out.println(m.calculator(-50.3));
+		
+//		p = (a,b) -> a.charAt(b); 람다식으로 표현
+		p = String :: charAt;
+		char ch = p.pick("안녕하세요! 인스턴스 메소드를 참조하라", 5);
+		System.out.println(ch);
+		
+		Utils ut = new Utils();
+		//c = (a,b) -> ut.add(a, b);
+		c = ut :: add; //c는 ut의 add를 참조하겠다.
+		System.out.println(c.compute(50, 80));
+		
+		Applyable app;
+//		app = (a, b) -> a.isSame(b); // 기본적인 람다식의 형태
+		app = Box :: isSame; //app는 Box의 isSame을 참조하겠다.
+		System.out.println(app.apply(new Box(1), new Box(2)));
+		System.out.println(app.apply(new Box(1), new Box(1)));
+		
+	}
+}

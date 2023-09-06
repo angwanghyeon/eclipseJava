@@ -1,0 +1,21 @@
+package exam16.reduce;
+
+import java.util.List;
+
+public class ReduceTest {
+	public static void main(String[] args) {	
+		List<Integer> num = List.of(5,6,3,7,1);
+		
+		int sum1 = num.stream().reduce(0, (a,b)->a+b);
+		
+		int sum2 = num.stream().reduce(0, Integer::sum);
+		
+		int sum3 = num.stream().reduce(1, (a,b) -> a*b);
+		
+		System.out.println(sum1);
+		System.out.println(sum2);
+		System.out.println(sum3);
+		
+		Optional<Integer> sum3 = num.stream().reduce(Integer::sum);
+	}
+}

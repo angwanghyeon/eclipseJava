@@ -1,0 +1,15 @@
+package exam17;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
+public class ReadArrayTest {
+	public static void main(String[] args) throws Exception {
+		InputStream is = new FileInputStream("C:/Temp/test2.db");
+		byte[] ss = new byte[100];
+		while(true) {
+			int a = is.read(ss);
+		}
+	}
+}

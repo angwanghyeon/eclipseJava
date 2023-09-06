@@ -1,0 +1,18 @@
+package exam17;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
+public class ReadOffSetTest {
+	public static void main(String[] args) throws Exception {	
+		InputStream is = new FileInputStream("C:/Temp/test3.db"); //파일을 기반으로 하는 인풋스트림생성
+		byte[] b = new byte[5]; //길이가 5인 바이트 배열 생성
+		int a = is.read(b, 1, 3); //3byte를 읽고 1번지부터 저장함
+		System.out.println("-------"+a); 
+			for(int i=0; i<b.length; i++) { //배열의 길이만큼 반복
+				System.out.println(b[i]); //배열을 출력
+		}
+		is.close();	
+	}
+}

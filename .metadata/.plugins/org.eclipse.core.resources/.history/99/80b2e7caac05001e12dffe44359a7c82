@@ -1,0 +1,9 @@
+package exam16;
+
+import exam15.stream.Nation;
+
+public class NationSortedTest {
+	public static void main(String[] args) {
+		Stream<String> s1 = Nation.nations.stream();
+	}
+}

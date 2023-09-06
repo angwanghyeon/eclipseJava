@@ -1,0 +1,19 @@
+package exam17;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
+public class ReadTest {
+	public static void main(String[] args) throws Exception {
+		InputStream is = new FileInputStream("C:/Temp/test1.db"); //파일에서 값을 가져오겠다
+		while(true) { //참으로 주고 무한 돌리기
+			int data = is.read(); //is의 값을 불러온다
+			if(data== -1) 
+				break; //data가 -1 이면 반복문을 종료하고 값을 출력만해
+			System.out.println(data);
+		}
+		is.close();
+		//input은 플러시가 없음
+	}
+}

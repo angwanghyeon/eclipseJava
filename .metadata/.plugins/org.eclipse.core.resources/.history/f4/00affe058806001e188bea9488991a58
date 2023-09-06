@@ -1,0 +1,9 @@
+package exam17.substream;
+
+public class CharacterConvertStreamTest {
+	public static void main(String[] args) {
+		write("문자 변환 스트림을 사용합니다.");
+		String data = read();
+		System.out.println(data);
+	}
+}

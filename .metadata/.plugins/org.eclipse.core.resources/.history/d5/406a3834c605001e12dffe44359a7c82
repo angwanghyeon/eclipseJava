@@ -1,0 +1,12 @@
+package exam16.reduce;
+
+import java.util.stream.Stream;
+
+import exam15.stream.Nation;
+
+public class NationReduceTest {
+	public static void main(String[] args) {
+		Stream<Nation> s1 = Nation.nations.stream();
+		s1.reduce((n1,n2) -> n1.getPopulation() > n2.getPopulation()? n1:n2);
+	}
+}

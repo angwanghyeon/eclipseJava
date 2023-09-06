@@ -1,0 +1,11 @@
+package practice.ex08;
+
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+public class BufferedReader {
+	public static void main(String[] args) {
+		InputStream is = System.in;
+		InputStreamReader isr = InputStreamReader(is);
+	}
+}

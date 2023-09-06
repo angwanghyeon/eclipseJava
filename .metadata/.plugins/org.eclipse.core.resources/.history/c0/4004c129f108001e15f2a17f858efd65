@@ -1,0 +1,14 @@
+package practice.ex08;
+
+import java.io.DataOutputStream;
+import java.io.OutputStream;
+
+public class AsciiCodeOutTest {
+	public static void main(String[] args) {
+		OutputStream os = System.out;
+		DataOutputStream dos = new DataOutputStream(os);
+		for(int i=48; i<59; i++) {
+			dos.write(i);
+		}
+	}
+}

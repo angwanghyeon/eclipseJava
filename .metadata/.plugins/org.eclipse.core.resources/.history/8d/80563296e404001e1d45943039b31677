@@ -1,0 +1,18 @@
+package exam15;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+
+import exam14.lambda.Car;
+
+public class CarComparatorTest2 {
+	public static void main(String[] args) {
+		List<Car> list = Car.car.subList(0, 3);
+		Car[] cars = list.toArray(new Car[4]); // 이렇게 만들면 한자리가 빔
+
+		Comparator<Car> modelComp = 
+					Comparator.comparing(Car::getModel);
+		System.out.println(Arrays.toString(cars));
+	}
+}

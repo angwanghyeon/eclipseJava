@@ -1,0 +1,13 @@
+package exam17.substream;
+
+import java.text.SimpleDateFormat;
+import java.util.List;
+
+public class ObjStreamTest {
+	public static void main(String[] args) {
+		writeList();
+		List<Board> list = readList();
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+	}
+}

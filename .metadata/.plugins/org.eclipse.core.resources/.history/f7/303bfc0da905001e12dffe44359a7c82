@@ -1,0 +1,13 @@
+package exam16;
+
+import java.util.stream.Stream;
+
+import exam15.stream.Nation;
+
+public class NationMapTest {
+	public static void main(String[] args) {
+		Stream<Nation> n1 = Nation.nations.stream();
+		Stream<String> s1 = n1.map(Nation::getName);
+		s1.limit(4).forEach(Util::print);
+	}
+}

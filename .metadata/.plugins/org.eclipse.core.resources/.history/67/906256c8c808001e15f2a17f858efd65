@@ -1,0 +1,27 @@
+package exam18;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ProductStorage {
+	private	Scanner sc = new Scanner(System.in);
+	private List<Product> list = new ArrayList<>();
+	private int counter;
+	
+	public void showMenu() {
+		
+		while(true) {
+		
+		System.out.println("------------------------");
+		System.out.println("1. 등록 | 2. 목록 | 3. 종료");
+		System.out.println("------------------------");
+		
+		System.out.println("선택 : ");
+		String select = sc.nextLine();
+		switch(select) {
+		case "1" : 
+		}
+		}
+	}
+}

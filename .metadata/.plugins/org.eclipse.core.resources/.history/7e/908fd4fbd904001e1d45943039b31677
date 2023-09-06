@@ -1,0 +1,18 @@
+package exam15;
+
+import java.util.function.Function;
+import java.util.function.ToIntFunction;
+
+import exam14.lambda.Car;
+
+public class CarFunctionTest {
+	public static void main(String[] args) {
+		Function<Car, String> f1 = c -> c.getModel();
+		ToIntFunction<Car> f2 = c -> c.getAge();
+		
+		for(Car c : Car.car) {
+			System.out.println("("+f1.apply(c)+", "
+								+f2.applyAsInt(c)+")");
+		}
+	}
+}

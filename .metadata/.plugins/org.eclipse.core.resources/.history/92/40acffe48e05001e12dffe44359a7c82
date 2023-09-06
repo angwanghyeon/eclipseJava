@@ -1,0 +1,21 @@
+package exam15.stream;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class NationTest {
+	public static void main(String[] args) {
+		
+		List<Nation> n1 = Nation.nations.subList(0, 5);
+		Nation[] na = n1.toArray(new Nation[5]);
+//		Collections.addAll(, n1);
+		Comparator<Nation> cn = Comparator.comparing(Nation::isIsland);
+		System.out.println();
+		Arrays.sort(na, cn);
+		System.out.println(na);
+		
+	}
+}

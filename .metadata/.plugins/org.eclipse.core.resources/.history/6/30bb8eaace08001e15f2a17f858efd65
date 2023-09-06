@@ -1,0 +1,13 @@
+package exam18;
+
+import java.io.File;
+
+public class FileTest {
+	public static void main(String[] args) {
+		File dir = new File("C:/Temp/images");
+		File file1 = new File("C:/Temp/file1.txt");
+		File file2 = new File("C:/Temp/file2.txt");
+		File file3 = new File("C:/Temp/file3.txt");
+		File file4 = new File("C:/Temp/file4.txt");
+	}
+}

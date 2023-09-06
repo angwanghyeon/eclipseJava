@@ -1,0 +1,10 @@
+package practice.ex07;
+
+import java.util.stream.Stream;
+
+public class PopulationTest {
+	public static void main(String[] args) {
+		Stream<Population> sp = Population.pop.stream();
+		Stream<Double> si = sp.map(Population::getPo);
+	}
+}

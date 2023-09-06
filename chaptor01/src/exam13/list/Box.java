@@ -1,0 +1,15 @@
+package exam13.list;
+
+public class Box<T> {
+	
+	private T obj;
+
+	public T getObj() {
+		return obj;
+	}
+
+	public void setObj(T obj) {
+		this.obj = obj;
+	}
+	
+}

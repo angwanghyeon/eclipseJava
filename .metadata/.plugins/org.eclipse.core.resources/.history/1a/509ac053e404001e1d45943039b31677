@@ -1,0 +1,12 @@
+package exam15;
+
+import java.util.List;
+
+import exam14.lambda.Car;
+
+public class CarComparatorTest2 {
+	public static void main(String[] args) {
+		List<Car> list = Car.car.subList(0, 3);
+		Car[] cars = list.toArray(new Car[4]);
+	}
+}

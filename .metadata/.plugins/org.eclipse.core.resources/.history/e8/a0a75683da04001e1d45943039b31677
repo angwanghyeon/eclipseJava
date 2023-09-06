@@ -1,0 +1,27 @@
+package exam15;
+
+import java.util.List;
+import java.util.function.Function;
+import java.util.function.ToIntFunction;
+
+import exam14.lambda.Car;
+
+public class CarFunctionTest {
+	public static void main(String[] args) {
+		Function<Car, String> f1 = c -> c.getModel();
+		ToIntFunction<Car> f2 = c -> c.getAge();
+		
+		for(Car c : Car.car) {
+			System.out.print("("+f1.apply(c)+", "
+								+f2.applyAsInt(c)+")");
+		}
+		System.out.println();
+		
+		double averageAge = average(Car.car, c -> c.getAge());
+	}
+
+	private static double average(List<Car> car, Object object) {
+
+		return 0;
+	}
+}

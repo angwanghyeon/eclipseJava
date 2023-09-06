@@ -1,0 +1,10 @@
+package exam15;
+
+import java.util.function.Consumer;
+import java.util.function.IntConsumer;
+
+public class Consumertest {
+	public static void main(String[] args) {
+		Consumer<String> c1 = x-> System.out.println(x.toLowerCase());
+	}
+}

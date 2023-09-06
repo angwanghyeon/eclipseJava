@@ -1,0 +1,15 @@
+package exam16;
+
+import java.util.OptionalInt;
+
+public class OptionalIntBaseTest {
+	public static void main(String[] args) {
+		OptionalInt oil = OptionalInt.of(3);
+		OptionalInt oi2 = OptionalInt.empty();
+		
+		System.out.print("[step 1.] ");
+		oil.ifPresent(i -> System.out.println(i+"/t"));
+		oi2.ifPresent(i -> System.out.println(i));
+		System.out.println();
+	}
+}

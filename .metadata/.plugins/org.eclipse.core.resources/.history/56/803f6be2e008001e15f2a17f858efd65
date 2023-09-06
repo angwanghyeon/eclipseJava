@@ -1,0 +1,16 @@
+package practice.ex07;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.stream.Stream;
+
+import exam15.stream.Nation;
+
+public class NationIslandTest {
+	public static void main(String[] args) {
+		Stream<Nation> nation = Nation.nations.stream();
+		Comparator<Nation> cn = Comparator.comparing(Nation::isIsland);
+		System.out.println(nation.filter(s->s.isIsland()==false)
+				.forEach(t -> System.out.println(t.getName()+", ")));
+	}
+}

@@ -1,0 +1,21 @@
+package exam17;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
+public class ReadOffSetTest {
+	public static void main(String[] args) throws Exception {	
+		InputStream is = new FileInputStream("C:/Temp/test3.db");
+		byte[] b = new byte[100];
+		while(true) {
+			int a = is.read(b, 0, 20);
+			if(a==-1)
+				break;
+			for(int i=0; i<a; i++) {
+				System.out.println(b[i]);
+			}
+		}
+			
+	}
+}

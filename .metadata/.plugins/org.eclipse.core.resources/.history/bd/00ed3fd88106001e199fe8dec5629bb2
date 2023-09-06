@@ -1,0 +1,7 @@
+package exam17;
+
+public class ByteFileCopier {
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,16 @@
+package exam15.stream;
+
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
+public class Array2StreamTest {
+	public static void main(String[] args) {
+		int[] ia = {2,3,4,5,10,12,15,18};
+		IntStream is = Arrays.stream(ia);
+//		System.out.println(is);
+		is.forEach(Util::print);
+//		public static <T> void print(T t) {
+//			System.out.println(t + " ");
+//		}
+	}
+}

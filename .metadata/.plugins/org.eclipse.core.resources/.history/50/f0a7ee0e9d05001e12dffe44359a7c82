@@ -1,0 +1,13 @@
+package exam15.stream;
+
+import java.util.stream.IntStream;
+
+public class LazyStreamTest {
+	public static void main(String[] args) {
+		IntStream is = IntStream.rangeClosed(1, 5);//1~5를 받는 stream 생성
+		
+		is.filter(x -> {
+			System.out.println("filter : "+x);
+		});
+	}
+}

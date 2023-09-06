@@ -1,0 +1,10 @@
+package exam18;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ProductStorage {
+	private	Scanner sc = new Scanner(System.in);
+	private List<Product> list = new ArrayList<>();
+}

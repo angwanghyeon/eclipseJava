@@ -1,0 +1,7 @@
+package exam16;
+
+public class NationSortedTest {
+	public static void main(String[] args) {
+		
+	}
+}

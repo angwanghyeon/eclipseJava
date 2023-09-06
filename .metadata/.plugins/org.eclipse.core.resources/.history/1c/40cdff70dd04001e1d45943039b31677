@@ -1,0 +1,14 @@
+package exam15;
+
+import java.util.Comparator;
+import java.util.function.BinaryOperator;
+
+public class CarOperatorTest {
+	public static void main(String[] args) {
+		Comparator<Integer> comp = (a, b) -> a-b;
+		
+		BinaryOperator<Integer> bo1 = BinaryOperator.maxBy(comp);
+		System.out.println(bo1.apply(10, 5));
+		
+	}
+}

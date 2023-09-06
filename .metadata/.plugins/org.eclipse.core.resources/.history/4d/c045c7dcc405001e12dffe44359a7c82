@@ -1,0 +1,33 @@
+package exam16.reduce;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.OptionalInt;
+
+public class ReduceTest {
+	public static void main(String[] args) {	
+		List<Integer> num = List.of(5,6,3,7,1);
+		
+		int sum1 = num.stream().reduce(0, (a,b)->a+b); //reduce 구조대로 값을 더한다
+		
+		int sum2 = num.stream().reduce(0, Integer::sum); //reduce 구조대로 Integer에 있는 sum 메소드대로 실행
+		
+		int sum3 = num.stream().reduce(1, (a,b) -> a*b); //reduce대로 곱연산 실행
+		
+		System.out.println(sum1);
+		System.out.println(sum2);
+		System.out.println(sum3);
+		
+		Optional<Integer> sum4 = num.stream() //
+								.reduce(Integer::sum); //reduce 구조대로 sum 연산 실행하고 optional 리턴 
+		System.out.println(sum4.get());
+		
+		OptionalInt sum5 = num.stream() //optionalint값 리턴
+				.mapToInt(x->x.intValue()).reduce(Integer::sum);
+		// 값을 int로 받고 그걸 reduce 구조대로 sum연산 실행
+		System.out.println(sum5.getAsInt());
+		
+		Optional<Integer> sum6 = num.stream()
+				.reduce((a,b)->a*b);
+	}
+}

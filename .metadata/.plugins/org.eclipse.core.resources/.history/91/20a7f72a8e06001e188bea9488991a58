@@ -1,0 +1,30 @@
+package exam17.substream;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+public class BufferTest {
+	public static void main(String[] args) throws Exception {
+		String originalFilePath1 = 
+				BufferTest.class.getResource("bg001.jpg").getPath();
+		String targetFilePath1 = 
+				"C:/Temp/targetFile1.jpg";
+		FileInputStream fis = new FileInputStream(originalFilePath1);
+		// 입력 스트림에
+		FileOutputStream fos = new FileOutputStream(targetFilePath1);
+		// 출력 스트림에
+		
+		String originalFilePath2 = 
+				BufferTest.class.getResource("copy.jpg").getPath();
+		String targetFilePath2 = 
+				"C:/Temp/targetFile2.jpg";
+		
+		FileInputStream fis2 = new FileInputStream(originalFilePath2);
+		FileOutputStream fos2 = new FileOutputStream(targetFilePath2);
+		BufferedInputStream bi = new BufferedInputStream(fis2);
+		BufferedOutputStream bo = new BufferedOutputStream(fos2);
+	}
+}

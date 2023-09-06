@@ -1,0 +1,35 @@
+package exam15;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+
+import exam14.lambda.Car;
+
+public class CarComparatorTest1 {
+	public static void main(String[] args) {
+		List<Car> list = Car.car.subList(0, 3); // 카를 호출해서 그 중에 012만 가져옴
+		Car[] cars = list.toArray(new Car[3]);
+		
+		Comparator<Car> modelComparator = 
+					Comparator.comparing(Car::getModel);
+		
+		System.out.println(Arrays.toString(cars)); // 012만 가져와서 출력
+		Arrays.sort(cars, modelComparator); // 모델의 오름차순으로 정렬
+		System.out.println(Arrays.toString(cars)); // 오름차순으로 정렬된 cars를 출력
+		
+		Arrays.sort(cars, modelComparator.reversed());
+		System.out.println(Arrays.toString(cars));
+		
+//		Comparator<Car> mileageComp = 
+//					Comparator.comparing(Car::getMileage); 
+		//굳이 이렇게 새로 만들 필요 없이 그냥 직접 객체 만들면 됨
+		
+		Arrays.sort(cars, Comparator.comparing(Car::getMileage));
+		System.out.println(Arrays.toString(cars));
+		
+		Arrays.sort(cars, Comparator.comparing(Car::getMileage, (a,b) -> b-a));
+		System.out.println(Arrays.toString(cars));
+		
+	}
+}

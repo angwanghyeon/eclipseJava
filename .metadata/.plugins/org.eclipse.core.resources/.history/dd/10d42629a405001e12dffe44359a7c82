@@ -1,0 +1,31 @@
+package exam16;
+
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+import exam15.stream.Nation;
+import exam15.stream.Util;
+
+public class FilterTest {
+	public static void main(String[] args) {
+		System.out.print("문자열 스트림 : ");
+		Stream<String> s1 = Stream.of("a1", "b1", "b2", "c1", "c2", "c3");
+		Stream<String> s2 = s1.filter(s -> s.startsWith("c")); // c로 시작하는것만 가져오겠다
+		Stream<String> s3 = s2.skip(1); // 1개는 건너뛰겠다
+
+		s3.forEach(Util::print);
+
+		System.out.println();
+		System.out.print("정수형 스트림 : ");
+		IntStream is1 = IntStream.of(1, 2, 3, 5, 7, 8, 1, 5);
+		IntStream is2 = is1.filter(i -> i % 2 == 0); // 2로 나눈 나머지가 0인 놈만 통과시켜라
+		IntStream is3 = is2.distinct(); //중복되는 것을 제거하라
+		
+		is3.forEach(Util::print);
+		
+		System.out.println();
+		System.out.print("인구가 1억명 이상의 나라 : ");
+		Stream<Nation> ns1 = Nation.nations.stream();//이렇게하면 클래스에서 만든 객체를 스트림화 해서 생성함
+		Stream<Nation> ns2 = ns1.filter(n -> n.getPopulation()>=100.0);
+	}
+}

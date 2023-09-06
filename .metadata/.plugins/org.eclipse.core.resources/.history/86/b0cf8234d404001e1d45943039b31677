@@ -1,0 +1,20 @@
+package exam15;
+
+import java.util.function.DoubleSupplier;
+import java.util.function.IntSupplier;
+import java.util.function.Supplier;
+
+public class SupplierTest {
+	public static void main(String[] args) {
+		Supplier<String> s1 = () -> "apple";
+		System.out.println(s1.get());
+		
+		int[] x = {0};
+		IntSupplier s2 = () -> x[0]++;
+		for(int i=0; i<3; i++) {
+			System.out.println(s2.getAsInt());
+		}
+		
+		DoubleSupplier s3 = ()-> Math.random() * 10 ;
+	}
+}

@@ -1,0 +1,17 @@
+package exam17;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+public class ReadTest {
+	public static void main(String[] args) {
+		InputStream is = new InputStream("C:/Temp/test1.db") {
+			
+			@Override
+			public int read() throws IOException {
+				
+				return 0;
+			}
+		};
+	}
+}

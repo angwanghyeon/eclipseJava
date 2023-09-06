@@ -1,0 +1,13 @@
+package exam15;
+
+import java.util.function.Function;
+
+public class CarFunctionTest {
+	public static void main(String[] args) {
+		Function<Integer, Integer> add2 = x -> x+2;
+		Function<Integer, Integer> mul2	= x -> x*2;
+		System.out.println(add2.apply(3));
+		System.out.println(mul2.apply(3));
+		System.out.println(add2.andThen(mul2).apply(3));
+	}
+}

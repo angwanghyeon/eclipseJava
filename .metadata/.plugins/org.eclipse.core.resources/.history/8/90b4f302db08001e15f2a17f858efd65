@@ -1,0 +1,17 @@
+package practice.ex07;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
+public class animalTest {
+	public static void main(String[] args) {
+//		String[] s = { "갈매기", "나비", "다람쥐", "라마" };
+		List<String> str = new ArrayList<>();
+		str.add("갈매기");
+		str.add("나비");
+		str.add("다람쥐");
+		str.add("라마");
+		Stream<String> ss = str.stream();
+	}
+}

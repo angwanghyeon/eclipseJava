@@ -1,0 +1,19 @@
+package exam16.collect;
+
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import exam15.stream.Nation;
+import exam15.stream.Type;
+
+public class PartitioningTest {
+	public static void main(String[] args) {
+		Stream<Nation> sn = Nation.nations.stream().limit(4);
+		Map<Boolean, List<Nation>> m1 = sn
+				.collect(Collectors.partitioningBy(
+						p-> p.getType() == Type.LAND));
+		System.out.println(m1);
+	}
+}

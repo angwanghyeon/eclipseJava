@@ -1,0 +1,9 @@
+package exam15.stream;
+
+
+public class Nation {
+		private final String name;
+		private final Type type;
+		private final double population;
+		private final int gdpRank;
+}

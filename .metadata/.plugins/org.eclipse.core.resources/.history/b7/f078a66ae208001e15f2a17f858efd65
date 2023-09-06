@@ -1,0 +1,34 @@
+package practice.ex07;
+
+public class Population {
+	private String name;
+	private double po;
+	
+	public Population(String name, double po) {
+		this.name = name;
+		this.po = po;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getPo() {
+		return po;
+	}
+
+	public void setPo(double po) {
+		this.po = po;
+	}
+
+	@Override
+	public String toString() {
+		return "Population [name=" + name + ", po=" + po + "]";
+	}
+	
+	
+}
